@@ -67,7 +67,8 @@
             "return-type":"json",
             "rotate": 0,
             "exec": "Weather wmodule",
-            "tooltip": true
+            "tooltip": true,
+            "interval": 3600
         },
 
         "custom/power": {
@@ -121,7 +122,7 @@
             "format-disconnected": "󰖪",
             "tooltip-format-disconnected": "󰖪",
             "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
-            "interval": 2,
+            "interval": 2
         },
     
         "pulseaudio": {
