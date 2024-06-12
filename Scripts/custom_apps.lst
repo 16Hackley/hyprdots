@@ -72,6 +72,11 @@ lib32-gst-plugins-base-libs
 vulkan-icd-loader 
 lib32-vulkan-icd-loader
 google-chrome-stable
+zip
+unzip
+gnome-console
+gnome-weather
+gnome-calendar
 # gamescope                                            # micro-compositor for gaming
 
 # --------------------------------------------------- // Music
