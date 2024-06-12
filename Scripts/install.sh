@@ -218,6 +218,10 @@ EOF
     done < "${scrDir}/system_ctl.lst"
 fi
 
+echo -e "\n\033[0;32m[permissions]\033[0m Setting permissions for scripts..."
 for script in "$HOME/.local/share/bin"/*; do
     sudo chmod +x "$script"
 done
+
+echo -e "\n\033[0;32m[Vencord]\033[0m Patching Discord..."
+sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
