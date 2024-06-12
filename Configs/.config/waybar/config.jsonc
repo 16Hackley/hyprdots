@@ -17,10 +17,18 @@
     
         "modules-left": ["custom/padd","custom/l_end","hyprland/workspaces","custom/r_end","custom/l_end","custom/spotify","custom/r_end","custom/padd"],
         "modules-center": [],
-        "modules-right": ["custom/padd","custom/l_end","custom/weather","custom/r_end","custom/l_end","clock","custom/r_end","custom/l_end","network","pulseaudio","pulseaudio#microphone","custom/keybindhint","custom/r_end","custom/l_end","tray","custom/r_end","custom/l_end","custom/power","custom/r_end","custom/padd"],
+        "modules-right": ["custom/padd","custom/l_end","custom/weather","custom/r_end","custom/l_end","clock","custom/r_end","custom/l_end","hyprland/language","network","pulseaudio","pulseaudio#microphone","custom/keybindhint","custom/r_end","custom/l_end","tray","custom/r_end","custom/l_end","custom/power","custom/r_end","custom/padd"],
     
     
     // sourced from modules based on config.ctl //
+
+        "hyprland/language": {
+            "format": "{}",
+            "format-en": "US",
+            "format-ru": "RU",
+            "rotate": 0,
+            "on-click": "keyboardswitch.sh"
+        },
         
         "custom/spotify": {
             "exec": "mediaplayer.py --player spotify",
@@ -58,7 +66,7 @@
         "clock": {
             "format": " {:%H:%M}",
             "rotate": 0,
-            "format-alt": "󰃭 {:%A, %d %B %Y}",
+            "format-alt": " {:%H:%M  󰃭 %A, %d %B %Y}",
             "tooltip-format": "<tt>{calendar}</tt>",
             "calendar": {
                 "mode": "month",
