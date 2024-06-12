@@ -21,6 +21,18 @@
     
     
     // sourced from modules based on config.ctl //
+         
+        "hyprland/workspaces": {
+            "disable-scroll": false,
+            "rotate": 0,
+            "all-outputs": true,
+            "active-only": false,
+            "on-click": "activate",
+            "on-scroll-up": "hyprctl dispatch workspace e-1",
+            "on-scroll-down": "hyprctl dispatch workspace e+1",
+            "persistent-workspaces": {
+            }
+        },
 
         "hyprland/language": {
             "format": "{}",
@@ -38,8 +50,8 @@
             "on-click": "playerctl previous --player spotify",
             "on-click-right": "playerctl next --player spotify",
             "on-click-middle": "playerctl play-pause --player spotify",
-            "on-scroll-up": "volumecontrol.sh -p spotify i",
-            "on-scroll-down": "volumecontrol.sh -p spotify d",
+            "on-scroll-up": "playerctl volume 0.05+ -p spotify",
+            "on-scroll-down": "playerctl volume 0.05- -p spotify",
             "max-length": 80,
             "escape": true,
             "tooltip": true
