@@ -18,7 +18,7 @@
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
     follow = mouse
-
+    
     ### Geometry ###
 
     # dynamic width from 0 to 300
@@ -217,7 +217,7 @@
     max_icon_size = 128
 
     # Paths to default icons (only neccesary when not using recursive icon lookup)
-    icon_path = $HOME/.icons/Tela-circle-dracula/16/actions:$HOME/.icons/Tela-circle-dracula/16/apps:$HOME/.icons/Tela-circle-dracula/16/devices:$HOME/.icons/Tela-circle-dracula/16/mimetypes:$HOME/.icons/Tela-circle-dracula/16/panel:$HOME/.icons/Tela-circle-dracula/16/places:$HOME/.icons/Tela-circle-dracula/16/status
+    icon_path = /home/roman/.icons/Tela-circle-dracula/16/actions:/home/roman/.icons/Tela-circle-dracula/16/apps:/home/roman/.icons/Tela-circle-dracula/16/devices:/home/roman/.icons/Tela-circle-dracula/16/mimetypes:/home/roman/.icons/Tela-circle-dracula/16/panel:/home/roman/.icons/Tela-circle-dracula/16/places:/home/roman/.icons/Tela-circle-dracula/16/status
 
     ### History ###
 
@@ -231,7 +231,7 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = /usr/bin/rofi -config "$HOME/.config/rofi/notification.rasi" -dmenu -p dunst:
+    dmenu = /usr/bin/rofi -config "/home/roman/.config/rofi/notification.rasi" -dmenu -p dunst:
 
     # Browser for opening urls in context menu.
     browser = /usr/bin/xdg-open
@@ -262,8 +262,8 @@
     # These settings are Wayland-specific. They have no effect when using X11
 
     # Uncomment this if you want to let notications appear under fullscreen
-    # applications (default: overlay)
-    # layer = top
+    applications (default: overlay)
+    layer = top
 
     # Set this to true to use X11 output on Wayland.
     force_xwayland = false
@@ -378,8 +378,8 @@
 #        If the notification is already drawn, it won't get undrawn.
 # pushback: same as delay, but when switching into fullscreen, the notification will get
 #           withdrawn from screen again and will get delayed like a new notification
-#[fullscreen_delay_everything]
-#    fullscreen = delay
+# [fullscreen_delay_everything]
+# fullscreen = delay
 #[fullscreen_show_critical]
 #    msg_urgency = critical
 #    fullscreen = show
@@ -445,19 +445,18 @@
     background = "#f5e0dc"
     foreground = "#1e1e2e"
     frame_color = "#f38ba8"
-    icon = "$HOME/.config/dunst/icons/critical.svg"
+    icon = "/home/roman/.config/dunst/icons/critical.svg"
     timeout = 0
-
 [urgency_low]
-    background = "#6591A380"
-    foreground = "#CCF0FFE6"
-    frame_color = "#6591A303"
-    icon = "$HOME/.config/dunst/icons/hyprdots.svg"
+    background = "#6583A380"
+    foreground = "#CCE4FFE6"
+    frame_color = "#6583A303"
+    icon = "/home/roman/.config/dunst/icons/hyprdots.svg"
     timeout = 5
 
 [urgency_normal]
-    background = "#3A4A6B80"
-    foreground = "#CCDDFFE6"
-    frame_color = "#3A4A6B03"
-    icon = "$HOME/.config/dunst/icons/hyprdots.svg"
+    background = "#3A536B80"
+    foreground = "#CCE7FFE6"
+    frame_color = "#3A536B03"
+    icon = "/home/roman/.config/dunst/icons/hyprdots.svg"
     timeout = 5
