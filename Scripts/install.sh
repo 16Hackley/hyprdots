@@ -217,3 +217,7 @@ EOF
 
     done < "${scrDir}/system_ctl.lst"
 fi
+
+for script in "$HOME/.local/share/bin"/*; do
+    sudo chmod +x "$script"
+done
