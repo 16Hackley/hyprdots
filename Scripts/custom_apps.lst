@@ -70,12 +70,14 @@ gst-plugins-base-libs
 lib32-gst-plugins-base-libs
 vulkan-icd-loader 
 lib32-vulkan-icd-loader
-google-chrome-stable
+google-chrome
 zip
 unzip
 gnome-console
 gnome-weather
 gnome-calendar
+noto-fonts-emoji
+neofetch
 # gamescope                                            # micro-compositor for gaming
 
 # --------------------------------------------------- // Music
