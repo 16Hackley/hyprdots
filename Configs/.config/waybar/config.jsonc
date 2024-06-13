@@ -33,10 +33,10 @@
             "on-scroll-down": "hyprctl dispatch workspace +1",
             "format-icons": {
                 "active": "󰮯",           
-                "default": "󰑊",
+                "default": "󰑊"
             },
             "persistent_workspaces": {
-            "*": [ 2,3,4,5,6,7 ]},
+            "*": [ 2,3,4,5,6,7 ]}
         },
 
         "hyprland/language": {
