@@ -227,4 +227,4 @@ echo -e "\n\033[0;32m[Vencord]\033[0m Patching Discord..."
 sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
 
 echo -e "\n\033[0;32m[Fonts]\033[0m Installing fonts..."
-sudo mkdit $HOME/.fonts && cd $HOME/.fonts && git clone --branch master https://github.com/16Hackley/fonts.git
+mkdir $HOME/.fonts && cd $HOME/.fonts && git clone --branch master https://github.com/16Hackley/fonts.git
