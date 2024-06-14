@@ -1,0 +1,211 @@
+{
+    // sourced from header module //
+    
+        "layer": "top",
+        "position": "top",
+        "mod": "dock",
+        "height": 31,
+        "exclusive": true,
+        "passthrough": false,
+        "gtk-layer-shell": true,
+        "reload_style_on_change": true,
+    
+    
+    // positions generated based on config.ctl //
+    
+        "modules-left": ["custom/padd","hyprland/workspaces","custom/padd","custom/spotify"],
+        "modules-center": [],
+        "modules-right": ["custom/weather","custom/padd","tray","custom/padd","hyprland/language","network","pulseaudio","pulseaudio#microphone","custom/padd","clock","custom/padd","custom/power","custom/padd"],
+    
+    
+    // sourced from modules based on config.ctl //
+ 
+        "hyprland/workspaces": {
+            "disable-scroll": false,
+            "format": "{icon}",
+            "rotate": 0,
+            "all-outputs": true,
+            "active-only": false,
+            "on-click": "activate",
+            "on-scroll-up": "hyprctl dispatch workspace -1",
+            "on-scroll-down": "hyprctl dispatch workspace +1",
+            "format-icons": {
+                "active": "󰮯",           
+                "default": "󰑊"
+            },
+            "persistent_workspaces": {
+            "*": [2,3,4,5,6,7]}
+        },
+
+        "hyprland/language": {
+            "format": "{}",
+            "format-en": "US",
+            "format-ru": "RU",
+            "rotate": 0,
+            "on-click": "keyboardswitch.sh"
+        },
+        
+        "custom/spotify": {
+            "exec": "mediaplayer.py --player spotify",
+            "format": " {}",
+            "rotate": 0,
+            "return-type": "json",
+            "on-click": "playerctl previous --player spotify",
+            "on-click-right": "playerctl next --player spotify",
+            "on-click-middle": "playerctl play-pause --player spotify",
+            "on-scroll-up": "playerctl volume 0.05+ -p spotify",
+            "on-scroll-down": "playerctl volume 0.05- -p spotify",
+            "max-length": 80,
+            "escape": true,
+            "tooltip": true
+        },
+
+        "custom/weather": {
+            "format": "{}",
+            "return-type":"json",
+            "rotate": 0,
+            "exec": "Weather wmodule",
+            "tooltip": false,
+            "interval": 3600 // once every hour
+        },
+
+        "custom/power": {
+            "format": "",
+            "rotate": 0,
+            "exec": "echo ; echo  logout",
+            "on-click": "logoutlaunch.sh 2",
+            "interval" : 86400, // once every day
+            "tooltip": false
+        },
+    
+        "clock": {
+            "format": "{:%a %d %b  %H:%M}",
+            "rotate": 0,
+            "tooltip-format": "<tt>{calendar}</tt>",
+            "calendar": {
+                "mode": "month",
+                "mode-mon-col": 3,
+                "on-scroll": 1,
+                "on-click-right": "mode",
+                "format": {
+                    "months": "<span color='#ffead3'><b>{}</b></span>",
+                    "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                    "today": "<span color='#ff6699'><b>{}</b></span>"
+                }
+            },
+            "actions": {
+                "on-click-right": "mode",
+                "on-click-forward": "tz_up",
+                "on-click-backward": "tz_down",
+                "on-scroll-up": "shift_up",
+                "on-scroll-down": "shift_down"
+            }
+        },
+    
+        "tray": {
+            "icon-size": 13,
+            "rotate": 0,
+            "spacing": 5
+        },
+    
+        "network": {
+            "tooltip": true,
+            "format-wifi": "󰖩",
+            "rotate": 0,
+            "format-ethernet": "󰖩",
+            "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+            "format-linked": "󰈀 {ifname} (No IP)",
+            "format-disconnected": "󰖪",
+            "tooltip-format-disconnected": "󰖪",
+            "format-alt": "<span foreground='#99ffdd'>  {bandwidthDownBytes}</span> <span foreground='#ffcc66'>  {bandwidthUpBytes}</span>",
+            "interval": 2
+        },
+    
+        "pulseaudio": {
+            "format": "{icon}   {volume}%",
+            "rotate": 0,
+            "format-muted": "婢",
+            "on-click": "pavucontrol -t 3",
+            "on-click-middle": "volumecontrol.sh -o m",
+            "on-scroll-up": "volumecontrol.sh -o i",
+            "on-scroll-down": "volumecontrol.sh -o d",
+            "tooltip-format": "{icon}   {volume}%",
+            "scroll-step": 5,
+            "format-icons": {
+                "headphone": "",
+                "hands-free": "",
+                "headset": "",
+                "phone": "",
+                "portable": "",
+                "car": "",
+                "default": ["", "", ""]
+            }
+        },
+    
+        "pulseaudio#microphone": {
+            "format": "{format_source}",
+            "rotate": 0,
+            "format-source": "",
+            "format-source-muted": "",
+            "on-click": "pavucontrol -t 4",
+            "on-click-middle": "volumecontrol.sh -i m",
+            "on-scroll-up": "volumecontrol.sh -i i",
+            "on-scroll-down": "volumecontrol.sh -i d",
+            "tooltip-format": "{format_source} {source_volume}%",
+            "scroll-step": 5
+        },
+    
+        "custom/keybindhint": {
+            "format": " ",
+            "rotate": 0,
+            "on-click": "keybinds_hint.sh"
+        },
+    
+    
+    // modules for padding //
+    
+        "custom/l_end": {
+            "format": " ",
+            "interval" : "once",
+            "tooltip": false
+        },
+    
+        "custom/r_end": {
+            "format": " ",
+            "interval" : "once",
+            "tooltip": false
+        },
+    
+        "custom/sl_end": {
+            "format": " ",
+            "interval" : "once",
+            "tooltip": false
+        },
+    
+        "custom/sr_end": {
+            "format": " ",
+            "interval" : "once",
+            "tooltip": false
+        },
+    
+        "custom/rl_end": {
+            "format": " ",
+            "interval" : "once",
+            "tooltip": false
+        },
+    
+        "custom/rr_end": {
+            "format": " ",
+            "interval" : "once",
+            "tooltip": false
+        },
+    
+        "custom/padd": {
+            "format": "     ",
+            "interval" : "once",
+            "tooltip": false
+        }
+    
+    }
+    
+    

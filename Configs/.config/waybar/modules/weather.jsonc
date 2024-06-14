@@ -1,0 +1,9 @@
+    "custom/weather": {
+        "exec": "Weather wmodule",
+        "return-type": "json",
+        "format": "{}", 
+        "escape": true, 
+        "tooltip": true,
+        "rotate": 0
+           
+    },
