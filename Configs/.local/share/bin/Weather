@@ -127,6 +127,6 @@ case $1 in
         echo "$CITY"
         ;;
     "wmodule")
-        echo "{\"text\":\"$WEATHER_ICON  $WEATHER_DESC $WEATHER_TEMP°\"}"
+        echo "{\"text\":\"$WEATHER_ICON   $WEATHER_DESC $WEATHER_TEMP°\"}"
         ;;
 esac
