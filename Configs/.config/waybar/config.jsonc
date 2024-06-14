@@ -65,6 +65,7 @@
             "return-type":"json",
             "rotate": 0,
             "exec": "Weather wmodule",
+            "on-click": "Weather wmodule",
             "tooltip": false,
             "interval": 3600 // once every hour
         },
@@ -79,7 +80,8 @@
         },
     
         "clock": {
-            "format": "{:%a %d %b  %H:%M}",
+            "format": "{:%H:%M}",
+            "format-alt": "{:%a %d %b  %H:%M}",
             "rotate": 0,
             "tooltip-format": "<tt>{calendar}</tt>",
             "calendar": {
