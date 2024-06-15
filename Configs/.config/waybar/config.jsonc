@@ -19,7 +19,7 @@
     
     
     // sourced from modules based on config.ctl //
- 
+
         "hyprland/workspaces": {
             "disable-scroll": false,
             "format": "{icon}",
