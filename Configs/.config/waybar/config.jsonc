@@ -15,7 +15,7 @@
     
         "modules-left": ["custom/padd","custom/l_end","hyprland/workspaces","custom/r_end","custom/l_end","custom/spotify","custom/r_end"],
         "modules-center": [],
-        "modules-right": ["custom/l_end","custom/weather","custom/r_end","custom/l_end","tray","custom/r_end","custom/l_end","hyprland/language","network","pulseaudio","pulseaudio#microphone","custom/r_end","custom/l_end","clock","custom/r_end","custom/l_end","custom/power","custom/r_end","custom/padd"],
+        "modules-right": ["custom/l_end","tray","custom/r_end","custom/l_end","hyprland/language","network","pulseaudio","pulseaudio#microphone","custom/r_end","custom/l_end","custom/weather","clock","custom/r_end","custom/l_end","custom/power","custom/r_end","custom/padd"],
     
     
     // sourced from modules based on config.ctl //
