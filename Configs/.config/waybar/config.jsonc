@@ -13,13 +13,13 @@
     
     // positions generated based on config.ctl //
     
-        "modules-left": ["custom/padd","hyprland/workspaces","custom/padd","custom/spotify"],
+        "modules-left": ["custom/padd","custom/l_end","hyprland/workspaces","custom/r_end","custom/l_end","custom/spotify","custom/r_end"],
         "modules-center": [],
-        "modules-right": ["custom/weather","custom/padd","tray","custom/padd","hyprland/language","network","pulseaudio","pulseaudio#microphone","custom/padd","clock","custom/padd","custom/power","custom/padd"],
+        "modules-right": ["custom/l_end","custom/weather","custom/r_end","custom/l_end","tray","custom/r_end","custom/l_end","hyprland/language","network","pulseaudio","pulseaudio#microphone","custom/r_end","custom/l_end","clock","custom/r_end","custom/l_end","custom/power","custom/r_end","custom/padd"],
     
     
     // sourced from modules based on config.ctl //
-
+ 
         "hyprland/workspaces": {
             "disable-scroll": false,
             "format": "{icon}",
@@ -81,7 +81,7 @@
     
         "clock": {
             "format": "{:%H:%M}",
-            "format-alt": "{:%a %d %b  %H:%M}",
+            "format-alt": "{:%a %d %b %H:%M}",
             "rotate": 0,
             "tooltip-format": "<tt>{calendar}</tt>",
             "calendar": {
@@ -124,7 +124,7 @@
         },
     
         "pulseaudio": {
-            "format": "{icon}   {volume}%",
+            "format": "{icon}  {volume}%",
             "rotate": 0,
             "format-muted": "婢",
             "on-click": "pavucontrol -t 3",
